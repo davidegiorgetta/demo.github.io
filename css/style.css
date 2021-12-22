@@ -1,0 +1,239 @@
+/* WEBFONTS */
+
+@font-face {
+    font-family: 'minion-pro-regular';
+    src: url('../fonts/minion-pro-regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'suisse-regular';
+    src: url('../fonts/suisse-regular.otf') format('opentype');
+}
+
+/* GLOBAL */
+
+*, html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "suisse-regular", Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+h1 {
+    font-size: 4vw;
+    line-height: 4.4vw;
+    margin-bottom: 3vw;
+}
+
+p.medium {
+    font-size: 2.2vw;
+    line-height: 2.6vw;
+}
+
+p {
+    font-size: 1.4vw;
+    line-height: 1.8vw;
+}
+
+.cover-images {
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    touch-action: none;
+}
+
+.cover-images img {
+    height: 100vh;
+    object-fit: contain;
+}
+
+.cover-text {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 2.4vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+.ticker {
+    width: 100vw;
+    position: fixed;
+    bottom: 15vh;
+    left: 0px;
+}
+
+.archive {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    overflow-y: auto;
+    height: 100vh;
+    width: 100vw;
+    padding: 2.4vw 2.4vw 10vw 2.4vw;
+    top: 0px;
+    left: 0px; 
+    transition: opacity 0.2s linear;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.archive p {
+    font-size: 2.2vw;
+    line-height: 2.6vw;
+    margin-bottom: 2.5vw;
+}
+
+.section-active .archive {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+    background-color: transparent;
+    transition: background-color 0.2s linear;
+}
+
+.section-active .footer {
+    background-color: #fff;
+}
+
+.footer .footer-shadow {
+    height: 1vw;
+    width: 100%;
+    opacity: 0.6;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.788953081232493) 100%);
+}
+
+.footer .big-link {
+    font-size: 2.2vw;
+    margin-bottom: -0.4vw;
+
+}
+
+.footer .small-link {
+    font-size: 1.4vw;
+}
+
+.footer .navigation {
+    float: left;
+    padding: 0.6vw 2.4vw;
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer .navigation .nav-item {
+    float: left;
+    margin-right: 2vw;
+}
+
+.footer .navigation .nav-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer .button {
+    float: right;
+    position: fixed;
+    right: 2.4vw;
+    bottom: 0px;
+    cursor: pointer;
+}
+
+.footer .button p {
+    font-size: 2.2vw;
+}
+
+.footer .button .archive-button {
+    display: block;
+}
+
+.footer .button .back-button {
+    display: none;
+}
+
+.section-active .footer .button .archive-button {
+    display: none;
+}
+
+.section-active .footer .button .back-button {
+    display: block;
+}
+
+@media screen and (max-width: 992px) {
+    
+    .archive p {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        margin-bottom: 1.6rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    p.medium {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
+    
+    p {
+        font-size: 1.15rem;
+        line-height: 1.3rem;
+    }
+
+    .cover-text {
+        padding: 30px;
+    }
+
+    .archive {
+        padding: 30px;
+    }
+
+    .footer .footer-shadow {
+        height: 15px;
+    }
+
+    .footer .big-link {
+        font-size: 1.6rem;
+        margin-bottom: -10px;
+    }
+
+    .footer .small-link {
+        font-size: 1.15rem;
+    }
+
+    .footer .navigation {
+        padding: 10px 30px;
+    }
+
+    .footer .navigation .nav-item {
+        margin-right: 15px;
+    }
+
+    .footer .button {
+        right: 30px;
+    }
+    
+    .footer .button p {
+        font-size: 1.6rem;
+    }
+
+}
